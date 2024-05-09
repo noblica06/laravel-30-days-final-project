@@ -48,6 +48,6 @@ class User extends Authenticatable
 
     public function employer() : HasOne
     {
-        return $this->hasone(Employer::class);
+        return $this->hasOne(Employer::class);
     }
 }
