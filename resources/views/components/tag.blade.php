@@ -1,1 +1,13 @@
-<a href="#" class="bg-white/10 hover:bg-white/20 px-3 font-bold py-1 rounded-xl text-sm">{{$slot}}</a>
+@props(['size' => 'base'])
+
+@php
+    $classes = 'bg-white/10 hover:bg-white/20 font-bold rounded-xl';
+    if($size == 'base'){
+        $classes.= ' px-8 py-1 text-sm';
+    }
+
+    if($size == 'small'){
+        $classes.= ' px-3 py-1 text-xs';
+    }
+@endphp
+<a href="#" class="{{$classes}}">{{$slot}}</a>

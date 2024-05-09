@@ -1,4 +1,4 @@
-<div class="p-4 bg-white/5 rounded-xl flex flex-row gap-6 border border-transparent hover:border-blue-800 group">
+<div class="flex flex-row gap-6">
     <x-employer-logo/>
     <div class="flex-1 flex flex-col">
         <a href="#" class="self-start text-sm text-gray-400">Laracasts</a>
