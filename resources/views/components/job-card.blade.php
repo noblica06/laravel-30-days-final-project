@@ -1,5 +1,5 @@
 @props(['job'])
-<x-panel class="flex flex-col text-center">
+<x-panel class="flex flex-col text-center" href="/jobs/{{$job->id}}">
     <div class="self-start text-sm">{{$job->employer->name}}</div>
         <div class="py-8 ">
             <h3 class="group-hover:text-blue-800 text-xl font-bold">{{$job->title}}</h3>

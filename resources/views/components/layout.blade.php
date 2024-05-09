@@ -28,14 +28,17 @@
             </div>
             <div>
                 @guest
-                <x-nav-link href="/login">Post a Job</x-nav-link>
+                <x-nav-link href="/login">Login</x-nav-link>
                 @endguest
 
                 @auth
-                    <form method="POST" action="/logout">
-                        @csrf
-                        <x-form-button>Log Out</x-form-button>
-                    </form>
+                    <div class="flex justify-between flex-row items-center gap-x-3">
+                        <x-nav-link href="/jobs/create">Post a Job</x-nav-link>
+                        <form method="POST" action="/logout">
+                            @csrf
+                            <x-form-button>Log Out</x-form-button>
+                        </form>
+                    </div>
                 @endauth
             </div>
         </nav>
