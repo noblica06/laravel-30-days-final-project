@@ -20,13 +20,24 @@
                     <img src="{{Vite::asset('resources/images/logo.svg') }}" alt="logo"/>
                 </a>
             </div>
-            <div class="space-x-6 font-bold">
-                <a href="">Jobs</a>
-                <a href="">Careers</a>
-                <a href="">Salaries</a>
-                <a href="">Companies</a>
+            <div class="space-x-6">
+                <x-nav-link href="">Jobs</x-nav-link>
+                <x-nav-link href="">Careers</x-nav-link>
+                <x-nav-link href="">Salaries</x-nav-link>
+                <x-nav-link href="">Companies</x-nav-link>
             </div>
-            <div>Post a Job</div>
+            <div>
+                @guest
+                <x-nav-link href="/login">Post a Job</x-nav-link>
+                @endguest
+
+                @auth
+                    <form method="POST" action="/logout">
+                        @csrf
+                        <x-form-button>Log Out</x-form-button>
+                    </form>
+                @endauth
+            </div>
         </nav>
 
         <main class="mt-10 max-w-[986px] mx-auto">
