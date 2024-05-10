@@ -26,7 +26,7 @@
                         <label for="salary" class="block  leading-6 text-white/50">Salary</label>
                         <div class="mt-2">
                             <div class="flex rounded-xl sm:max-w-md">
-                                <input value="{{ $job->salary}}" type="text" name="title" id="title"  class="block flex-1 border-white rounded-xl bg-white/5 py-1.5 px-3 text-white placeholder:text-white/25 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Shift Leader" required>
+                                <input value="{{ $job->salary}}" type="text" name="salary" id="salary"  class="block flex-1 border-white rounded-xl bg-white/5 py-1.5 px-3 text-white placeholder:text-white/25 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Shift Leader" required>
                             </div>
                             @error('salary')
                             <p class="text-xs text-red-500 font-semibold mt-1"> {{$message}} </p>
